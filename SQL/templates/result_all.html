@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th {
+            padding: 10px 15px;
+            background-color: cornflowerblue;
+            color: white;
+            text-align: left;
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dadada;
+        }
+
+        tr:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>class</th>
+                <th>message</th>
+                <th>grade</th>
+
+            </tr>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    
+</body>
+</html>
